@@ -18,22 +18,22 @@ sudo apt update
 sudo apt install ros-humble-desktop
 sudo apt install ros-humble-gazebo-ros-pkgs
 
-##Run Simulation
+## Run Simulation
 ros2 launch gazebo_ros gazebo.launch.py gui:=false
 
-##Run UR10 Control
+## Run UR10 Control
 ros2 launch ur_robot_driver ur_control.launch.py \
 ur_type:=ur10 \
 robot_ip:=192.168.0.1 \
 use_fake_hardware:=true
 
-##Control Interface
+## Control Interface
 Publish trajectories to:
 /scaled_joint_trajectory_controller/joint_trajectory
 Subscribe to:
 /joint_states
 
-##Notes
+## Notes
 • Uses fake hardware (no physical robot required)
 • Designed for DevOps reproducibility
 • Compatible with MATLAB ROS2 toolbox
