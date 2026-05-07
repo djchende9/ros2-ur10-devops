@@ -19,19 +19,27 @@ sudo apt install ros-humble-desktop
 sudo apt install ros-humble-gazebo-ros-pkgs
 ```
 ## Run Simulation
+```bash
 ros2 launch gazebo_ros gazebo.launch.py gui:=false
+```
 
 ## Run UR10 Control
+```bash
 ros2 launch ur_robot_driver ur_control.launch.py \
 ur_type:=ur10 \
 robot_ip:=192.168.0.1 \
 use_fake_hardware:=true
+```
 
 ## Control Interface
 Publish trajectories to:
+```bash
 /scaled_joint_trajectory_controller/joint_trajectory
+````
 Subscribe to:
+```bash
 /joint_states
+```
 
 ## Notes
 • Uses fake hardware (no physical robot required)
