@@ -17,7 +17,7 @@ Install dependencies:
 sudo apt update
 sudo apt install ros-humble-desktop
 sudo apt install ros-humble-gazebo-ros-pkgs
-
+```
 ## Run Simulation
 ros2 launch gazebo_ros gazebo.launch.py gui:=false
 
